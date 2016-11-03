@@ -1,7 +1,12 @@
 // init project
 var express = require('express');
 var app = express();
+var path = require('path');
 var port = process.env.PORT || 3000;
+
+app.get('/', function(req, res) {
+  res.sendFile(path.join(__dirname + '/index.html'))
+});
 
 function createNaturalDate(dateObject) {
   var month = dateObject.getMonth();
@@ -20,7 +25,7 @@ app.get("/:time", function (req, res) {
   var naturalDate;
   // Check if unix time is all integers
   if (time.match(/[0-9]+/)[0].split('').length === time.length) {
-    unixTime = time;
+    unixTime = parseInt(time, 10);
     var dateObject = new Date(time * 1000);
     naturalDate = createNaturalDate(dateObject);
   } else if (Date.parse(time)) {
