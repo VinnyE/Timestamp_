@@ -7,7 +7,7 @@ function createNaturalDate(dateObject) {
   var month = dateObject.getMonth();
   var date = dateObject.getDate();
   var year = dateObject.getFullYear();
-  var monthNames = [ "January", "February", "March", "April", "May", "June", "November", "December" ];
+  var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
   var naturalDate = monthNames[month] + ' ' + date + ', ' + year;
   return naturalDate;
 }
@@ -15,7 +15,6 @@ function createNaturalDate(dateObject) {
 app.get("/:time", function (req, res) {
   // grab the param value
   var time = req.params.time;
-  console.log(req.params.time);
   // if param val is a unix timestamp or natural language date
   var unixTime;
   var naturalDate;
@@ -28,6 +27,7 @@ app.get("/:time", function (req, res) {
     var dateObject = new Date(time);
     unixTime = Date.parse(time) / 1000;
     naturalDate = createNaturalDate(dateObject);
+
   } else {
     unixTime = null;
     naturalDate = null;
