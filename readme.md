@@ -1,5 +1,7 @@
 A full stack JavaScript app that returns a unix timestamp and the natural language form of that date.
 
+Technologies used: HTML5, Node.js, & Express.
+
 User stories fulfilled: 
 
 1) User Story: I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
