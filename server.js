@@ -5,7 +5,7 @@ var path = require('path');
 var port = process.env.PORT || 3000;
 
 app.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname + '/index.html'))
+  res.sendFile(path.join(__dirname + '/index.html'));
 });
 
 function createNaturalDate(dateObject) {

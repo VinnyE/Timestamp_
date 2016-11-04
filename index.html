@@ -7,17 +7,26 @@
   <title>Timestamp Microservice </title>
 </head>
   <body>
-      <h1>Timestamp microservice</h1>
-    User stories:<br />
+    <h1>Timestamp microservice</h1>
+    <h2>User stories:</h2>
 
-    1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)<br />
-    2) If it does, it returns both the Unix timestamp and the natural language form of that date.<br />
-    3) If it does not contain a date or Unix timestamp, it returns null for those properties.
+    <p>
+      1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016).
+    </p>
+
+    <p>
+      2) If it does, it returns both the Unix timestamp and the natural language form of that date.
+    </p>
+
+    <p>
+      3) If it does not contain a date or Unix timestamp, it returns null for those properties.
+    </p>
 
     <h2>Example usage:</h2>
-    https://cryptic-gorge-84424.herokuapp.com/December%2015,%202015 <br />
-    https://cryptic-gorge-84424.herokuapp.com/1450137600
+    <p><a href="https://cryptic-gorge-84424.herokuapp.com/December%2015,%202015" target="_blank">https://cryptic-gorge-84424.herokuapp.com/December%2015,%202015</a></p>
+
+    <p><a href="https://cryptic-gorge-84424.herokuapp.com/1450137600" target="_blank">https://cryptic-gorge-84424.herokuapp.com/1450137600</a></p>
     <h2>Example output:</h2>
-    { "unix": 1450137600, "natural": "December 15, 2015" }
+    <p>{ "unix": 1450137600, "natural": "December 15, 2015" }</p>
   </body>
 </html>
